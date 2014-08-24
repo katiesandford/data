@@ -23,11 +23,16 @@ ANSWER:
 4. How many customers have never received a box? 
 
 QUERY:
-	SELECT COUNT( *)  FROM account LEFT OUTER JOIN box ON account.id=box.account_id WHERE delivery_date IS null
+	SELECT DISTINCT COUNT(*)  FROM account LEFT OUTER JOIN box ON account.id=box.account_id WHERE delivery_date IS null
 ANSWER:
 	1888
 
 5. How many different products have been sent? 
+
+QUERY:
+	SELECT COUNT(*) FROM ((SELECT product1 from box) UNION (SELECT product2 FROM box) UNION (SELECT product3 FROM box) UNION (SELECT product4 FROM box)) AS allproducts
+ANSWER:
+	165
 
 6. Rank the name of the top 3 promotions for the week starting 22nd Oct 2012 (in terms 
 
