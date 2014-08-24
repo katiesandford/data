@@ -1,7 +1,10 @@
 Graze
 
-1. How many customers signed up on the week starting 15
-
+1. How many customers signed up on the week starting 15th Oct 2012?
+Query:
+    SELECT COUNT(*) FROM `account` WHERE signup_date BETWEEN '2012-10-15' AND '2012-10-21'
+Answer:
+    10960
 
 2. What is the total revenue from account 1856619? 
 
