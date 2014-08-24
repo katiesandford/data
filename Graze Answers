@@ -8,8 +8,18 @@ Answer:
 
 2. What is the total revenue from account 1856619? 
 
+Query:
+	SELECT SUM(price) FROM `box` WHERE account_id=1856619
+Answer:
+	529.98
+
 3. How many customers have received at least 15 boxes?
 
+QUERY:
+	SELECT COUNT(*) FROM (SELECT COUNT(*) as box_count  FROM box GROUP BY account_id) AS aggregate_table  WHERE box_count  >= 15
+ANSWER:
+	13624
+	
 4. How many customers have never received a box? 
 
 5. How many different products have been sent? 
