@@ -1,0 +1,52 @@
+Graze
+
+1. How many customers signed up on the week starting 15
+
+
+2. What is the total revenue from account 1856619? 
+
+3. How many customers have received at least 15 boxes?
+
+4. How many customers have never received a box? 
+
+5. How many different products have been sent? 
+
+6. Rank the name of the top 3 promotions for the week starting 22nd Oct 2012 (in terms 
+
+of signups) 
+
+7. Generate a result set with the following column headings, for all boxes that were 
+
+delivered on 26th Jan 2013: 
+
+Box ID Account ID Promotion ID 
+
+8. What is the average time between signup and cancellation (in days)? 
+
+9. What is the average time between signup and a first box (in days)? 
+
+10.
+
+a. How many customers are still active (haven’t cancelled the service)? 
+
+b. (optional) How many customers were active (haven’t cancelled the service) at 
+
+11. Explain what this query does, and write down a possible use you can imagine for it: 
+
+SELECT 
+
+ signup_date, 
+
+ promotion_id, 
+
+ FLOOR(DATEDIFF(cancelled_date, signup_date) / 7) week, 
+
+ COUNT(DISTINCT account.id) numCancellations 
+
+FROM account 
+
+WHERE cancelled_date IS NOT NULL 
+
+GROUP BY signup_date, promotion_id, week; 
+
+the end of every week [from the first sign-up week in the data set]?
