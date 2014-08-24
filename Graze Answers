@@ -19,8 +19,13 @@ QUERY:
 	SELECT COUNT(*) FROM (SELECT COUNT(*) as box_count  FROM box GROUP BY account_id) AS aggregate_table  WHERE box_count  >= 15
 ANSWER:
 	13624
-	
+
 4. How many customers have never received a box? 
+
+QUERY:
+	SELECT COUNT( *)  FROM account LEFT OUTER JOIN box ON account.id=box.account_id WHERE delivery_date IS null
+ANSWER:
+	1888
 
 5. How many different products have been sent? 
 
