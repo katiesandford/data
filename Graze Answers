@@ -38,6 +38,13 @@ ANSWER:
 
 of signups) 
 
+QUERY:
+	SELECT name FROM promotion JOIN (SELECT promotion_id, COUNT(*) AS count FROM `account` GROUP BY promotion_id ORDER BY count DESC LIMIT 3) AS promotionsignup ON promotion.id = promotionsignup.promotion_id
+ANSWER:
+	Friend Referral (Sept '11 onwards) - 
+	TV web response
+	WHSmith (voucher at till - October 
+
 7. Generate a result set with the following column headings, for all boxes that were 
 
 delivered on 26th Jan 2013: 
