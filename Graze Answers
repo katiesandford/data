@@ -51,19 +51,37 @@ delivered on 26th Jan 2013:
 
 Box ID Account ID Promotion ID 
 
+QUERY:
+	SELECT box_summary.id AS 'Box ID', box_summary.account_id AS 'Account ID', promotion_id AS 'Promotion ID' FROM (SELECT id, account_id FROM `box` WHERE delivery_date='2013-01-26') AS box_summary LEFT JOIN account ON box_summary.account_id=account.id
+ANSWER:
+	See Question7
+
 8. What is the average time between signup and cancellation (in days)? 
+
+QUERY:
+	SELECT AVG(DATEDIFF(cancelled_date,signup_date)) FROM `account` WHERE cancelled_date IS NOT NULL
+ANSWER:
+	55.0079	
 
 9. What is the average time between signup and a first box (in days)? 
 
+QUERY:
+	SELECT AVG(DATEDIFF(delivery_date, signup_date)) FROM (SELECT * FROM (SELECT account_id, delivery_date FROM box ORDER BY delivery_date) AS ordered_box GROUP BY account_id) AS first_account_box LEFT JOIN account ON account_id=account.id
+ANSWER:
+	4.0526
 10.
 
 a. How many customers are still active (haven’t cancelled the service)? 
+	QUERY:
+		SELECT COUNT(*) FROM `account` WHERE cancelled_date IS NOT null
+	ANSWER:
+		45920	
 
-b. (optional) How many customers were active (haven’t cancelled the service) at 
+b. (optional) How many customers were active (haven’t cancelled the service) at the end of every week [from the first sign-up week in the data set]?
 
 11. Explain what this query does, and write down a possible use you can imagine for it: 
 
-SELECT 
+SELECT
 
  signup_date, 
 
@@ -79,4 +97,28 @@ WHERE cancelled_date IS NOT NULL
 
 GROUP BY signup_date, promotion_id, week; 
 
-the end of every week [from the first sign-up week in the data set]?
+Use:
+	The data shows how many ex-customers kept their account active for each combination of signup date, promotion and number of whole weeks.
+
+	For each promotion and signup_date combination you will be able to plot a discrete distribution of account cancellation over time (weeks). An uneffective promotion would be very positively skewed.
+
+	You will be able to assess the effectiveness of each promotion by comparing distributions of different promotions.
+
+	You can assess the date dependency of promotion effectiveness by comparing distributions of the same promotion at different times. This would be useful in case some promotions are no longer worth running, or in case some promotions should be encouraged at certain times of the year. 
+
+Explanation:
+	The query selects data from the database table named account (SELECT ... FROM account).
+
+	The data is filtered to only include rows representing customers who have cancelled their account(WHERE cancelled_date IS NOT NULL).
+
+	It directly selects the signup_date and promotion_id database columns.
+
+	The week function is applied to each database row. It calculates the number of days the customer's account was active (DATEDIFF(cancelled_date, signup_date) and then the number of weeks (/7). It then finds how many whole weeks the account was active before cancellation (FLOOR).
+
+	The numCancellation function return the number of rows with distinct account ids.
+
+	The GROUP BY clause causes the statement to group the results by unique combinations of the signup_date,promotion_id and week rows.
+
+
+
+
