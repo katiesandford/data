@@ -146,3 +146,7 @@ Explanation:
 	The numCancellation function return the number of rows with distinct account ids.
 
 	The GROUP BY clause causes the statement to group the results by unique combinations of the signup_date,promotion_id and week rows.
+
+
+
+	
