@@ -1,4 +1,4 @@
-Graze
+Graze Answers
 
 1. How many customers signed up on the week starting 15th Oct 2012?
 Query:
@@ -16,14 +16,14 @@ Answer:
 3. How many customers have received at least 15 boxes?
 
 QUERY:
-	SELECT COUNT(*) FROM (SELECT COUNT(*) as box_count  FROM box GROUP BY account_id) AS aggregate_table  WHERE box_count  >= 15
+	SELECT COUNT(*) FROM (SELECT COUNT(*) as box_count FROM box GROUP BY account_id) AS aggregate_table  WHERE box_count  >= 15
 ANSWER:
 	13624
 
 4. How many customers have never received a box? 
 
 QUERY:
-	SELECT DISTINCT COUNT(*)  FROM account LEFT OUTER JOIN box ON account.id=box.account_id WHERE delivery_date IS null
+	SELECT DISTINCT COUNT(*) FROM account LEFT OUTER JOIN box ON account.id=box.account_id WHERE delivery_date IS null
 ANSWER:
 	1888
 
@@ -39,7 +39,7 @@ ANSWER:
 of signups) 
 
 QUERY:
-	SELECT name FROM promotion JOIN (SELECT promotion_id, COUNT(*) AS count FROM `account` GROUP BY promotion_id ORDER BY count DESC LIMIT 3) AS promotionsignup ON promotion.id = promotionsignup.promotion_id
+	SELECT name FROM promotion JOIN (SELECT promotion_id, COUNT(*) AS count FROM account GROUP BY promotion_id ORDER BY count DESC LIMIT 3) AS promotionsignup ON promotion.id = promotionsignup.promotion_id
 ANSWER:
 	Friend Referral (Sept '11 onwards) - 
 	TV web response
@@ -59,7 +59,7 @@ ANSWER:
 8. What is the average time between signup and cancellation (in days)? 
 
 QUERY:
-	SELECT AVG(DATEDIFF(cancelled_date,signup_date)) FROM `account` WHERE cancelled_date IS NOT NULL
+	SELECT AVG(DATEDIFF(cancelled_date,signup_date)) FROM account WHERE cancelled_date IS NOT NULL
 ANSWER:
 	55.0079	
 
@@ -78,6 +78,34 @@ a. How many customers are still active (haven’t cancelled the service)?
 		45920	
 
 b. (optional) How many customers were active (haven’t cancelled the service) at the end of every week [from the first sign-up week in the data set]?
+	QUERY:
+		SET @min_signupweek= (SELECT MIN(signup_date)  FROM account); 
+
+		SELECT cancelweek, signupcount_zerosreplaced, cancelcount , @csum := @csum + signupcount_zerosreplaced  - cancelcount Activeusers FROM(
+		SELECT *, COALESCE(signupcount, 0) signupcount_zerosreplaced  FROM (SELECT FLOOR(DATEDIFF(signup_date, @min_signupweek )/7) signupweek, COUNT(*) signupcount FROM account GROUP BY signupweek) as x
+		RIGHT JOIN
+		(SELECT FLOOR(DATEDIFF(cancelled_date, @min_signupweek )/7) cancelweek, COUNT(*) cancelcount FROM account GROUP BY cancelweek) as y
+		ON
+		x.signupweek = y.cancelweek ORDER BY cancelweek
+		) AS a, (SELECT @csum:=0) AS b WHERE cancelweek IS NOT NULL
+
+	Explanation:
+		For each account I found the signup week:
+		    FLOOR(DATEDIFF(signup_date, @min_signupweek )/7)
+		and the cancellation week:
+		    FLOOR(DATEDIFF(cancelled_date, @min_signupweek )/7).
+
+		By grouping by signupweek we can count the number of customers who signed up per week (signupweek).
+		By grouping by cancel week we can count the number of customers who cancelled per week (cancelweek).
+
+		We right join the 2 tables by cancelweek. Strictly we should UNION the result of this join to the left join of 2 tables (to include all the rows in x where signup week does not appear in y). As we didn't seem to have any cases of this in this dataset I didn't include this so that the query is readable.
+
+		After ordering table x by week number, we can calculate the cumulative sum of (signedup customers - cancelled customers) to give us the total number of active users per week. To do this we have to create a new sign up count column where all null valules are replaced by zeros (signupcount_zerosreplaced). If we had performed the left join (as mentioned above) we would have had to do the same for the cancelcount column.
+
+		To perform the cumulative sum we didn't actually need to use the absolute min_signupweek in the signupweek and cancelweek calculations as they cancel. I included it to keep the weeks more readable.
+
+	Answer:
+		I'm not sure how to send this to you.
 
 11. Explain what this query does, and write down a possible use you can imagine for it: 
 
@@ -98,13 +126,13 @@ WHERE cancelled_date IS NOT NULL
 GROUP BY signup_date, promotion_id, week; 
 
 Use:
-	The data shows how many ex-customers kept their account active for each combination of signup date, promotion and number of whole weeks.
+	The data shows how many ex-customers cancelled their account for each combination of signup date, promotion and number of whole weeks.
 
 	For each promotion and signup_date combination you will be able to plot a discrete distribution of account cancellation over time (weeks). An uneffective promotion would be very positively skewed.
 
 	You will be able to assess the effectiveness of each promotion by comparing distributions of different promotions.
 
-	You can assess the date dependency of promotion effectiveness by comparing distributions of the same promotion at different times. This would be useful in case some promotions are no longer worth running, or in case some promotions should be encouraged at certain times of the year. 
+	You can assess the date dependency of promotion effectiveness by comparing distributions of the same promotion at different times. This would be useful in case some promotions are no longer worth running, or in case some promotions should be encouraged at certain times of the month/week. 
 
 Explanation:
 	The query selects data from the database table named account (SELECT ... FROM account).
@@ -118,7 +146,3 @@ Explanation:
 	The numCancellation function return the number of rows with distinct account ids.
 
 	The GROUP BY clause causes the statement to group the results by unique combinations of the signup_date,promotion_id and week rows.
-
-
-
-
