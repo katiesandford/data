@@ -1,0 +1,58 @@
+account_3783695@monsters.org.uk	2013-04-01 10:01:19	Google Adwords
+account_3789205@hotmail.co.uk	2013-04-02 20:35:40	Google Adwords
+account_3790045@gmail.com	2013-04-03 07:49:04	Google Adwords
+account_3790635@janeclayton.co.uk	2013-04-04 10:05:23	Facebook
+account_3791585@hotmail.co.uk	2013-04-03 15:08:37	Google Adwords
+account_3793985@yahoo.co.uk	2013-04-04 07:49:47	Google Adwords
+account_3795718@blissability.co.uk	2013-04-04 14:28:16	Google Adwords
+account_3797360@hotmail.com	2013-04-04 19:53:13	Google Adwords
+account_3798485@gmail.com	2013-04-05 02:04:48	Google Adwords
+account_3804195@sky.com	2013-04-06 06:59:24	Facebook
+account_3808974@googlemail.com	2013-04-07 15:55:08	Facebook
+account_3813683@hotmail.com	2013-04-08 15:49:33	Google Adwords
+account_3813915@blueyonder.co.uk	2013-04-08 16:23:22	Facebook
+account_3814722@yahoo.co.uk	2013-04-08 18:13:38	Facebook
+account_3815480@blueyonder.co.uk	2013-04-08 20:19:30	Google Adwords
+account_3816868@hotmail.co.uk	2013-04-09 08:55:04	Google Adwords
+account_3819347@me.com	2013-04-09 15:20:19	Google Adwords
+account_3819594@hotmail.co.uk	2013-04-09 15:50:17	Facebook
+account_3823696@signrighthighland.co.uk	2013-04-10 12:21:37	Twitter
+account_3823899@hotmail.com	2013-04-10 12:47:13	Facebook
+account_3824577@manchester.ac.uk	2013-04-10 14:22:44	Facebook
+account_3825263@gmail.com	2013-04-10 16:08:48	Google Adwords
+account_3827896@yahoo.co.uk	2013-04-10 22:28:24	Twitter
+account_3828644@talktalk.net	2013-04-11 09:10:54	Google Adwords
+account_3829562@arionltd.co.uk	2013-04-11 11:48:38	Google Adwords
+account_3830565@yahoo.co.uk	2013-04-11 13:41:15	Facebook
+account_3834240@hotmail.co.uk	2013-04-11 21:45:34	Facebook
+account_3836682@gmail.com	2013-04-12 13:30:37	Facebook
+account_3838318@hotmail.co.uk	2013-04-12 16:51:23	Google Adwords
+account_3839343@hotmail.com	2013-04-12 19:43:07	Facebook
+account_3842583@yahoo.co.uk	2013-04-13 16:05:30	Facebook
+account_3846420@btinternet.com	2013-04-14 16:20:58	Facebook
+account_3846612@btinternet.com	2013-04-14 16:48:53	Facebook
+account_3847851@gmail.com	2013-04-14 20:44:55	Facebook
+account_3849399@live.co.uk	2013-04-15 11:22:02	Facebook
+account_3856942@hotmail.com	2013-04-16 16:42:58	Google Adwords
+account_3862921@gmail.com	2013-04-17 17:40:36	Twitter
+account_3865762@yahoo.co.uk	2013-04-18 11:23:30	Google Adwords
+account_3866545@gmail.com	2013-04-18 13:35:16	Google Adwords
+account_3868145@hotmail.com	2013-04-18 17:50:45	Google Adwords
+account_3869061@hotmail.co.uk	2013-04-18 20:51:46	Facebook
+account_3870907@hotmail.co.uk	2013-04-19 12:34:30	Google Adwords
+account_3875503@gmail.com	2013-04-20 17:58:59	Google Adwords
+account_3879869@hotmail.com	2013-04-22 10:41:05	Google Adwords
+account_3883129@hotmail.com	2013-04-22 19:40:09	Google Adwords
+account_3884076@hotmail.co.uk	2013-04-22 23:06:33	Facebook
+account_3888400@hotmail.co.uk	2013-04-23 20:54:33	Google Adwords
+account_3890087@colt.net	2013-04-24 11:18:21	Google Adwords
+account_3890644@gmail.com	2013-04-24 12:43:58	Google Adwords
+account_3892759@hotmail.co.uk	2013-04-24 18:26:30	Google Adwords
+account_3893932@hotmail.com	2013-04-24 22:48:57	Google Adwords
+account_3894536@hmc.ox.ac.uk	2013-04-25 09:51:02	Twitter
+account_3896033@live.com	2013-04-25 14:41:52	Google Adwords
+account_3898154@gmail.com	2013-04-25 22:29:43	Google Adwords
+account_3901217@live.co.uk	2013-04-26 22:00:32	Google Adwords
+account_3902029@talktalk.net	2013-04-27 12:01:54	Google Adwords
+account_3904289@btinternet.com	2013-04-28 11:21:57	Google Adwords
+account_3906133@hotmail.co.uk	2013-04-28 20:31:35	Google Adwords

@@ -1,0 +1,16 @@
+{
+    "name": "graze/data_test",
+    "description": "A PHP application for viewing graze customer boxes",
+    
+    "autoload": {
+        "psr-0": {
+            "Graze": "./lib"
+        }
+    },
+    
+    "require": {
+        "doctrine/dbal": "2.4.*",
+        "slim/slim": "2.*",
+        "j4mie/idiorm": "1.*"
+	}
+}

@@ -1,0 +1,61 @@
+account_5220865@btinternet.com	2013-11-05 09:53:55	Google Adwords
+account_5264941@vickyboateng.co.uk	2013-11-01 23:09:24	Twitter
+account_5265022@hotmail.com	2013-11-01 23:10:20	Google Adwords
+account_5266065@yahoo.co.uk	2013-11-02 09:43:52	Facebook
+account_5269940@comcast.net	2013-11-02 18:19:32	Google Adwords
+account_5276003@btinternet.com	2013-11-03 17:14:02	Google Adwords
+account_5294285@alleyne.co.uk	2013-11-05 10:50:41	Google Adwords
+account_5296563@googlemail.com	2013-11-05 12:59:52	Facebook
+account_5308389@gmail.com	2013-11-06 11:15:43	Facebook
+account_5309051@googlemail.com	2013-11-06 12:13:33	Twitter
+account_5311664@hotmail.co.uk	2013-11-06 15:35:15	Google Adwords
+account_5313543@yahoo.co.uk	2013-11-06 17:05:36	Facebook
+account_5314226@btinternet.com	2013-11-06 17:44:34	Twitter
+account_5321897@gmail.com	2013-11-07 02:52:04	Google Adwords
+account_5326762@hotmail.co.uk	2013-11-07 15:28:35	Google Adwords
+account_5330965@hotmail.com	2013-11-07 18:47:32	Google Adwords
+account_5332984@aol.com	2013-11-07 21:26:22	Google Adwords
+account_5347052@hotmail.co.uk	2013-11-08 21:29:25	Google Adwords
+account_5360465@hotmail.com	2013-11-10 01:41:14	Google Adwords
+account_5363479@hotmail.co.uk	2013-11-10 09:37:28	Google Adwords
+account_5367903@me.com	2013-11-10 19:02:50	Facebook
+account_5368607@hotmail.co.uk	2013-11-10 20:20:06	Google Adwords
+account_5369275@hotmail.com	2013-11-10 21:21:52	Google Adwords
+account_5384931@yahoo.com	2013-11-12 06:19:19	Facebook
+account_5386794@vip-chalets.com	2013-11-12 12:40:49	Facebook
+account_5386896@hotmail.co.uk	2013-11-12 12:49:59	Facebook
+account_5390401@btinternet.com	2013-11-12 16:42:25	Twitter
+account_5392272@hotmail.com	2013-11-12 18:15:40	Facebook
+account_5393608@gmail.com	2013-11-12 20:24:35	Google Adwords
+account_5403960@btinternet.com	2013-11-13 19:32:03	Facebook
+account_5404434@gmail.com	2013-11-13 20:19:12	Facebook
+account_5422022@aol.com	2013-11-15 12:38:05	Google Adwords
+account_5435085@talktalk.net	2013-11-16 18:57:48	Facebook
+account_5448610@hotmail.com	2013-11-18 12:28:44	Google Adwords
+account_5453305@yahoo.co.uk	2013-11-18 17:21:40	Google Adwords
+account_5453367@mccammont.com	2013-11-18 17:27:51	Facebook
+account_5460860@aol.com	2013-11-19 10:19:59	Google Adwords
+account_5469461@hotmail.co.uk	2013-11-19 21:56:10	Twitter
+account_5471044@gmail.com	2013-11-20 04:01:44	Google Adwords
+account_5473337@hotmail.co.uk	2013-11-20 13:28:16	Google Adwords
+account_5476296@hotmail.co.uk	2013-11-20 16:29:02	Facebook
+account_5484378@hotmail.co.uk	2013-11-20 21:44:44	Facebook
+account_5486737@gmail.com	2013-11-21 01:53:09	Google Adwords
+account_5487867@comcast.net	2013-11-21 06:00:27	Facebook
+account_5489865@hotmail.co.uk	2013-11-21 12:18:28	Facebook
+account_5518534@live.com	2013-11-23 18:29:41	Google Adwords
+account_5518748@gmail.com	2013-11-23 19:03:54	Google Adwords
+account_5518947@gmail.com	2013-11-23 19:33:39	Facebook
+account_5525153@hotmail.com	2013-11-24 17:45:43	Google Adwords
+account_5530505@ntlworld.com	2013-11-25 11:55:03	Google Adwords
+account_5532563@gmail.com	2013-11-25 14:15:13	Google Adwords
+account_5536921@nhs.net	2013-11-25 17:00:50	Twitter
+account_5539546@rocketmail.com	2013-11-25 18:51:17	Twitter
+account_5552824@hotmail.com	2013-11-26 17:44:36	Google Adwords
+account_5552962@hotmail.co.uk	2013-11-26 17:51:39	Google Adwords
+account_5553961@gmail.com	2013-11-26 19:22:53	Twitter
+account_5560613@btinternet.com	2013-11-27 13:08:09	Google Adwords
+account_5563653@bellsouth.net	2013-11-27 16:44:38	Facebook
+account_5573069@hotmail.co.uk	2013-11-28 16:02:50	Google Adwords
+account_5574169@hotmail.co.uk	2013-11-28 16:55:38	Google Adwords
+account_5587268@hotmail.com	2013-11-30 19:20:56	Google Adwords

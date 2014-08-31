@@ -1,0 +1,45 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+    # Username
+    user = "vagrant"
+
+    # Box
+    config.vm.box = "precise64"
+    config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+    config.vm.network :forwarded_port, host: 4567, guest: 80
+    config.vm.network :forwarded_port, host: 4555, guest: 3306
+    config.vm.hostname = "grazevm"
+  
+    # Shared folders
+    config.vm.synced_folder '.', "/home/vagrant/code"
+  
+    # Virtualbox
+    config.vm.provider :virtualbox do |vb|
+        vb.customize ['modifyvm', :id, '--name', 'graze.data']
+        vb.customize ['modifyvm', :id, '--natdnshostresolver1', 'on']
+    end
+
+    # Setup
+    config.vm.provision :shell, :inline => "apt-get update --fix-missing"
+    config.vm.provision :shell, :inline => "apt-get install -q -y python-software-properties python g++ make git curl"
+    config.vm.provision :shell, :inline => "export DEBIAN_FRONTEND=noninteractive && apt-get install -q -y mysql-server"
+    config.vm.provision :shell, :inline => "add-apt-repository ppa:ondrej/php5 && apt-get update"
+    config.vm.provision :shell, :inline => "apt-get install -q -y php5-cli php5-curl php5-xdebug php5-mysql"
+    config.vm.provision :shell, :inline => "echo 'memory_limit = 256M' > /etc/php5/cli/conf.d/memory.ini"
+    config.vm.provision :shell, :inline => "echo 'include_path = \'/home/vagrant/code\'' >> /etc/php5/cli/php.ini"
+    config.vm.provision :shell, :inline => "echo 'cd code' >> .bash_profile"
+
+    # Add DB
+    config.vm.provision :shell, :inline => "mysql -e 'create database live'"
+    config.vm.provision :shell, :inline => "mysql -e 'create database reporting'"
+    config.vm.provision :shell, :inline => "mysql live < /vagrant/data.sql"
+
+    # Composer
+    config.vm.provision :shell, :inline => "curl -s https://getcomposer.org/installer | php"
+    config.vm.provision :shell, :inline => "mv ./composer.phar /usr/local/bin/composer"
+    config.vm.provision :shell, :inline => "cd /vagrant && composer update"
+
+end

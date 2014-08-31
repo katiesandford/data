@@ -1,0 +1,43 @@
+account_4050511@googlemail.com	2013-06-01 10:26:54	Twitter
+account_4052950@surrey.ac.uk	2013-06-02 14:32:51	Google Adwords
+account_4055839@gmail.com	2013-06-03 14:29:19	Google Adwords
+account_4055987@hotmail.co.uk	2013-06-03 15:09:29	Google Adwords
+account_4068747@hotmail.com	2013-06-06 11:21:07	Facebook
+account_4069457@hotmail.co.uk	2013-06-06 13:47:13	Google Adwords
+account_4069863@ntlworld.com	2013-06-06 15:21:53	Facebook
+account_4070346@msn.com	2013-06-06 17:05:40	Facebook
+account_4072456@gmail.com	2013-06-07 10:41:51	Twitter
+account_4077560@gmail.com	2013-06-08 22:10:33	Google Adwords
+account_4078753@googlemail.com	2013-06-09 15:06:30	Google Adwords
+account_4080313@live.co.uk	2013-06-09 22:41:47	Google Adwords
+account_4081634@governor.co.uk	2013-06-10 13:38:44	Google Adwords
+account_4082825@virginmedia.com	2013-06-10 17:23:24	Google Adwords
+account_4092497@ntlworld.com	2013-06-13 15:52:17	Google Adwords
+account_4098974@aol.com	2013-06-13 08:47:47	Google Adwords
+account_4099822@yahoo.co.uk	2013-06-13 11:33:32	Google Adwords
+account_4104795@hotmail.co.uk	2013-06-14 07:59:08	Facebook
+account_4110742@hotmail.co.uk	2013-06-15 13:31:37	Google Adwords
+account_4112896@gmail.com	2013-06-15 20:05:52	Twitter
+account_4114416@gmail.com	2013-06-16 11:34:03	Facebook
+account_4120110@gmail.com	2013-06-17 15:07:11	Facebook
+account_4122472@btinternet.com	2013-06-17 20:28:53	Google Adwords
+account_4124724@wagedayadvance.co.uk	2013-06-18 11:39:20	Facebook
+account_4124876@aol.com	2013-06-18 12:03:15	Twitter
+account_4133718@yahoo.co.uk	2013-06-19 20:46:58	Facebook
+account_4136033@hotmail.co.uk	2013-06-20 14:02:04	Google Adwords
+account_4137050@champneys.com	2013-06-20 16:51:54	Google Adwords
+account_4137967@sky.com	2013-06-20 19:10:15	Google Adwords
+account_4139963@btinternet.com	2013-06-21 10:08:23	Google Adwords
+account_4144584@sky.com	2013-06-22 12:29:05	Facebook
+account_4152079@mail.com	2013-06-24 12:22:57	Google Adwords
+account_4156531@gmail.com	2013-06-25 09:40:14	Twitter
+account_4156556@hotmail.com	2013-06-25 09:43:24	Twitter
+account_4157807@hotmail.com	2013-06-25 13:25:02	Google Adwords
+account_4172914@hotmail.co.uk	2013-06-26 22:01:46	Google Adwords
+account_4175392@blueyonder.co.uk	2013-06-27 08:19:42	Google Adwords
+account_4179499@hotmail.co.uk	2013-06-27 16:56:53	Google Adwords
+account_4186077@hotmail.co.uk	2013-06-28 14:49:27	Facebook
+account_4186780@hotmail.com	2013-06-28 16:02:56	Google Adwords
+account_4188651@gmail.com	2013-06-28 20:11:30	Facebook
+account_4195198@gmail.com	2013-06-30 16:57:43	Google Adwords
+account_4195287@ntlworld.com	2013-06-30 17:20:39	Facebook

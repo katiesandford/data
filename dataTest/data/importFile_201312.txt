@@ -1,0 +1,37 @@
+account_5594081@rhodenlaw.com	2013-12-01 22:14:59	Twitter
+account_5606975@gmail.com	2013-12-03 16:10:58	Google Adwords
+account_5608683@qq.com	2013-12-03 17:39:04	Facebook
+account_5624644@gmail.com	2013-12-05 11:50:06	Google Adwords
+account_5629667@hotmail.com	2013-12-05 19:17:31	Google Adwords
+account_5631161@gmail.com	2013-12-05 22:28:04	Twitter
+account_5634566@gators.ufl.edu	2013-12-06 13:33:18	Twitter
+account_5637657@hotmail.co.uk	2013-12-06 17:52:50	Facebook
+account_5638815@bgsu.edu	2013-12-06 20:16:50	Facebook
+account_5643390@gmail.com	2013-12-07 12:51:45	Facebook
+account_5653736@upekkha.com.my	2013-12-08 15:38:15	Twitter
+account_5660602@students.plymouth.ac.uk	2013-12-09 13:34:37	Google Adwords
+account_5663731@aol.com	2013-12-09 17:01:00	Twitter
+account_5666352@saffery.com	2013-12-09 21:17:59	Facebook
+account_5666519@hotmail.co.uk	2013-12-09 21:38:11	Google Adwords
+account_5674299@yahoo.com	2013-12-10 16:34:47	Facebook
+account_5675499@wcs.org	2013-12-10 17:30:47	Facebook
+account_5683393@hotmail.co.uk	2013-12-11 14:20:38	Google Adwords
+account_5689404@gmail.com	2013-12-11 20:50:28	Facebook
+account_5700235@live.co.uk	2013-12-12 19:59:57	Google Adwords
+account_5712236@hotmail.co.uk	2013-12-14 11:30:44	Twitter
+account_5713203@gmail.com	2013-12-14 14:38:35	Facebook
+account_5715077@gmail.com	2013-12-14 21:10:35	Google Adwords
+account_5718767@icloud.com	2013-12-15 21:10:33	Google Adwords
+account_5724729@yahoo.co.uk	2013-12-16 20:31:00	Facebook
+account_5730632@hotmail.co.uk	2013-12-17 21:09:00	Google Adwords
+account_5739399@gmail.com	2013-12-19 17:35:08	Facebook
+account_5740374@gmail.com	2013-12-19 20:07:54	Facebook
+account_5742149@aol.com	2013-12-20 10:35:40	Google Adwords
+account_5744594@hotmail.co.uk	2013-12-20 21:30:36	Google Adwords
+account_5749233@hotmail.com	2013-12-22 22:12:37	Facebook
+account_5751392@newlinetheatre.com	2013-12-23 20:50:48	Google Adwords
+account_5767172@live.com	2013-12-28 05:51:49	Google Adwords
+account_5771847@yahoo.com	2013-12-28 19:55:33	Facebook
+account_5775055@googlemail.com	2013-12-29 09:44:43	Google Adwords
+account_5779181@gmail.com	2013-12-30 06:04:26	Twitter
+account_5788935@hotmail.com	2013-12-31 12:30:26	Facebook

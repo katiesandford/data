@@ -1,0 +1,68 @@
+account_4517268@yahoo.co.uk	2013-09-06 19:00:37	Facebook
+account_4548856@aol.com	2013-09-01 18:34:48	Twitter
+account_4554837@hotmail.co.uk	2013-09-02 14:25:56	Facebook
+account_4562242@gmail.com	2013-09-03 14:48:06	Google Adwords
+account_4567936@hotmail.co.uk	2013-09-03 16:09:55	Twitter
+account_4570583@gmail.com	2013-09-03 19:30:39	Google Adwords
+account_4576368@gmail.com	2013-09-04 13:39:44	Facebook
+account_4578789@urbanmoff.co.uk	2013-09-04 15:46:43	Facebook
+account_4579966@yahoo.com	2013-09-06 17:06:00	Twitter
+account_4596668@hotmail.co.uk	2013-09-05 20:53:36	Google Adwords
+account_4607917@yahoo.com	2013-09-06 21:10:35	Google Adwords
+account_4619190@bathempire.com	2013-09-09 10:30:34	Facebook
+account_4619445@hotmail.co.uk	2013-09-09 10:46:29	Facebook
+account_4629362@shu.ac.uk	2013-09-09 17:10:07	Google Adwords
+account_4635765@hotmail.com	2013-09-10 01:23:57	Facebook
+account_4640212@gmail.com	2013-09-10 12:42:10	Google Adwords
+account_4640916@hotmail.co.uk	2013-09-10 13:00:55	Facebook
+account_4643581@hotmail.com	2013-09-10 14:38:52	Twitter
+account_4658664@googlemail.com	2013-09-11 13:04:52	Facebook
+account_4672150@yahoo.com	2013-09-12 02:30:35	Google Adwords
+account_4675213@gmail.com	2013-09-12 11:57:43	Google Adwords
+account_4676358@hotmail.co.uk	2013-09-12 13:12:48	Facebook
+account_4685771@me.com	2013-09-12 21:19:26	Twitter
+account_4686244@gmail.com	2013-09-12 22:04:18	Google Adwords
+account_4689149@hotmail.co.uk	2013-09-13 10:54:50	Google Adwords
+account_4689459@gmail.com	2013-09-13 11:16:00	Facebook
+account_4689641@hotmail.co.uk	2013-09-13 11:20:37	Twitter
+account_4690509@hotmail.com	2013-09-13 12:09:42	Facebook
+account_4692403@hotmail.co.uk	2013-09-13 13:30:32	Google Adwords
+account_4698682@btinternet.com	2013-09-13 18:59:37	Google Adwords
+account_4700723@hotmail.com	2013-09-13 21:15:07	Google Adwords
+account_4704901@newsham.org.uk	2013-09-14 15:28:16	Twitter
+account_4705870@btinternet.com	2013-09-14 17:29:58	Google Adwords
+account_4706467@hotmail.co.uk	2013-09-14 18:46:24	Google Adwords
+account_4706593@hotmail.co.uk	2013-09-14 19:04:11	Google Adwords
+account_4706952@icloud.com	2013-09-14 19:56:51	Facebook
+account_4730911@yahoo.com	2013-09-17 13:09:49	Twitter
+account_4731626@yahoo.co.uk	2013-09-17 14:00:40	Twitter
+account_4744705@yahoo.co.uk	2013-09-18 15:26:01	Google Adwords
+account_4749235@hotmail.co.uk	2013-09-18 21:09:04	Google Adwords
+account_4752153@btinternet.com	2013-09-19 11:32:14	Facebook
+account_4760700@hotmail.com	2013-09-19 21:05:56	Facebook
+account_4760805@me.com	2013-09-19 21:17:19	Facebook
+account_4762377@hotmail.com	2013-09-20 08:28:04	Facebook
+account_4763556@op.pl	2013-09-20 11:20:17	Facebook
+account_4768669@hotmail.co.uk	2013-09-20 16:38:43	Google Adwords
+account_4771761@hotmail.co.uk	2013-09-20 21:42:24	Facebook
+account_4775278@hotmail.com	2013-09-21 14:36:28	Google Adwords
+account_4776688@hotmail.co.uk	2013-09-21 17:45:59	Google Adwords
+account_4783098@hotmail.co.uk	2013-09-22 20:53:59	Facebook
+account_4796065@hotmail.co.uk	2013-09-24 12:23:23	Google Adwords
+account_4797301@hotmail.co.uk	2013-09-24 13:22:29	Twitter
+account_4803159@mod.uk	2013-09-24 17:00:35	Facebook
+account_4808448@hotmail.co.uk	2013-09-24 21:28:05	Facebook
+account_4819231@veolia.co.uk	2013-09-25 17:36:52	Twitter
+account_4821901@yahoo.com	2013-09-25 21:12:27	Twitter
+account_4827200@googlemail.com	2013-09-26 13:56:17	Google Adwords
+account_4836449@gmail.com	2013-09-27 08:13:20	Google Adwords
+account_4841895@hotmail.com	2013-09-27 16:28:58	Facebook
+account_4843806@aol.co.uk	2013-09-27 18:12:29	Facebook
+account_4848569@yahoo.com	2013-09-28 13:47:51	Google Adwords
+account_4849131@hotmail.com	2013-09-28 15:07:44	Facebook
+account_4860066@gmail.com	2013-09-30 11:49:47	Facebook
+account_4864545@hotmail.com	2013-09-30 16:54:50	Facebook
+account_4864665@gmail.com	2013-09-30 16:56:50	Facebook
+account_4865750@yeah.net	2013-09-30 17:52:09	Google Adwords
+account_4865987@hotmail.co.uk	2013-09-30 18:06:43	Google Adwords
+account_4866101@gmail.com	2013-09-30 18:11:59	Twitter

@@ -1,0 +1,64 @@
+account_3441917@umich.edu	2013-02-01 04:23:01	Google Adwords
+account_3442605@gmail.com	2013-02-01 06:47:32	Facebook
+account_3445517@gmail.com	2013-02-01 13:31:47	Google Adwords
+account_3450073@yahoo.com	2013-02-01 20:17:55	Google Adwords
+account_3452080@googlemail.com	2013-02-02 00:51:26	Google Adwords
+account_3457138@btinternet.com	2013-02-02 16:35:02	Google Adwords
+account_3462007@yahoo.co.uk	2013-02-03 11:24:36	Google Adwords
+account_3464978@btinternet.com	2013-02-03 16:10:53	Google Adwords
+account_3466574@yahoo.co.uk	2013-02-03 18:43:59	Google Adwords
+account_3466970@gmail.com	2013-02-03 19:28:14	Google Adwords
+account_3468882@msn.com	2013-02-03 23:40:07	Facebook
+account_3472138@googlemail.com	2013-02-04 13:43:05	Google Adwords
+account_3476629@btinternet.com	2013-02-04 20:04:54	Google Adwords
+account_3482972@hotmail.co.uk	2013-02-05 16:16:33	Google Adwords
+account_3490062@me.com	2013-02-06 11:23:14	Facebook
+account_3492290@hotmail.com	2013-02-06 14:28:29	Google Adwords
+account_3494070@gmail.com	2013-02-06 16:47:05	Facebook
+account_3498255@gmail.com	2013-02-06 22:14:53	Facebook
+account_3502512@yahoo.com	2013-02-07 13:37:21	Facebook
+account_3502768@yahoo.com	2013-02-07 14:01:51	Google Adwords
+account_3503572@gmail.com	2013-02-07 15:22:24	Google Adwords
+account_3503727@yahoo.co.uk	2013-02-07 15:37:22	Facebook
+account_3507361@ymail.com	2013-02-07 21:22:50	Twitter
+account_3507638@uni.brighton.ac.uk	2013-02-07 21:58:12	Google Adwords
+account_3510316@btinternet.com	2013-02-08 11:11:26	Twitter
+account_3512506@yahoo.co.uk	2013-02-08 15:13:21	Twitter
+account_3514608@kent.ac.uk	2013-02-08 18:28:29	Facebook
+account_3519927@gmail.com	2013-02-10 17:47:31	Facebook
+account_3520269@hotmail.com	2013-02-09 14:58:56	Facebook
+account_3526893@rocketmail.com	2013-02-10 15:10:30	Facebook
+account_3528697@hotmail.com	2013-02-10 17:39:27	Google Adwords
+account_3537760@hotmail.com	2013-02-11 19:20:57	Google Adwords
+account_3541599@colfes.com	2013-02-12 11:50:19	Facebook
+account_3543109@o2.pl	2013-02-12 14:26:04	Google Adwords
+account_3543890@btinternet.com	2013-02-12 15:55:03	Google Adwords
+account_3544776@gmail.com	2013-02-12 16:51:45	Facebook
+account_3545194@hotmail.co.uk	2013-02-12 17:32:30	Google Adwords
+account_3549238@live.com	2013-02-13 09:28:30	Google Adwords
+account_3564184@hotmail.co.uk	2013-02-15 08:39:37	Google Adwords
+account_3564489@hotmail.com	2013-02-15 10:07:58	Facebook
+account_3566026@myelife.co.uk	2013-02-15 14:07:15	Twitter
+account_3580530@sky.com	2013-02-18 11:13:43	Facebook
+account_3583535@hotmail.co.uk	2013-02-18 16:57:05	Google Adwords
+account_3584521@gmail.com	2013-02-18 19:15:33	Twitter
+account_3586028@hotmail.co.uk	2013-02-18 22:57:40	Google Adwords
+account_3587038@gmail.com	2013-02-19 10:23:34	Google Adwords
+account_3588289@hotmail.com	2013-02-19 13:13:22	Google Adwords
+account_3589100@hotmail.co.uk	2013-02-19 14:37:09	Google Adwords
+account_3589273@hotmail.co.uk	2013-02-19 14:52:58	Google Adwords
+account_3589975@aol.com	2013-02-19 15:54:32	Google Adwords
+account_3593747@yahoo.com	2013-02-20 02:52:06	Google Adwords
+account_3594740@yahoo.co.uk	2013-02-20 11:31:15	Google Adwords
+account_3599429@hotmail.com	2013-02-21 00:15:42	Google Adwords
+account_3609854@btopenworld.com	2013-02-22 22:51:09	Google Adwords
+account_3612999@live.com	2013-02-24 10:02:10	Facebook
+account_3613891@gmail.com	2013-02-23 23:32:08	Twitter
+account_3615728@hotmail.com	2013-02-24 13:52:57	Google Adwords
+account_3619074@hotmail.com	2013-02-24 21:48:05	Facebook
+account_3619750@postgrad.manchester.ac.uk	2013-02-25 07:16:08	Google Adwords
+account_3624928@gmail.com	2013-02-25 20:49:49	Google Adwords
+account_3627148@gmail.com	2013-02-26 11:39:41	Google Adwords
+account_3636235@hotmail.co.uk	2013-02-27 16:51:34	Google Adwords
+account_3636746@hotmail.com	2013-02-27 17:29:33	Twitter
+account_3639489@hotmail.co.uk	2013-02-28 08:01:15	Facebook

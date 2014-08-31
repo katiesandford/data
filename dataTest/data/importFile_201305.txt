@@ -1,0 +1,41 @@
+account_3925291@gmail.com	2013-05-02 11:23:59	Twitter
+account_3926899@hotmail.com	2013-05-02 16:28:36	Google Adwords
+account_3930942@hotmail.com	2013-05-03 14:47:26	Facebook
+account_3942751@gmail.com	2013-05-06 21:13:08	Twitter
+account_3947761@yahoo.com	2013-05-07 21:37:31	Twitter
+account_3948918@biomet.com	2013-05-08 10:47:55	Facebook
+account_3951925@hotmail.com	2013-05-08 17:53:31	Google Adwords
+account_3952803@hotmail.co.uk	2013-05-08 20:32:27	Facebook
+account_3953809@hotmail.co.uk	2013-05-09 07:45:13	Google Adwords
+account_3954526@live.co.uk	2013-05-09 11:49:52	Twitter
+account_3954735@gmail.com	2013-05-09 12:28:50	Facebook
+account_3958393@gmail.com	2013-05-09 21:32:20	Google Adwords
+account_3960161@hotmail.co.uk	2013-05-10 12:52:58	Twitter
+account_3966255@hotmail.co.uk	2013-05-11 20:07:06	Facebook
+account_3974109@yahoo.co.uk	2013-05-13 20:04:18	Facebook
+account_3976622@btinternet.com	2013-05-14 12:06:22	Google Adwords
+account_3976624@btinternet.com	2013-05-14 12:08:44	Google Adwords
+account_3977993@rspb.org.uk	2013-05-14 15:14:34	Google Adwords
+account_3979884@live.co.uk	2013-05-14 19:40:09	Facebook
+account_3982001@msn.com	2013-05-17 12:57:39	Twitter
+account_3982447@mail.ru	2013-05-15 11:36:46	Google Adwords
+account_3982853@aol.com	2013-05-15 11:56:52	Google Adwords
+account_3983402@yahoo.co.uk	2013-05-15 12:57:02	Google Adwords
+account_3985662@hotmail.com	2013-05-15 17:26:13	Facebook
+account_3986949@msn.com	2013-05-15 20:10:26	Facebook
+account_3986971@hotmail.com	2013-05-15 20:12:53	Twitter
+account_3995615@hotmail.com	2013-05-20 09:57:05	Google Adwords
+account_3998774@gmail.com	2013-05-18 13:33:48	Google Adwords
+account_4008105@gmail.com	2013-05-20 19:01:48	Facebook
+account_4009764@hotmail.com	2013-05-21 09:10:57	Facebook
+account_4016893@sky.com	2013-05-22 18:28:32	Google Adwords
+account_4018417@live.co.uk	2013-05-23 10:16:34	Google Adwords
+account_4019701@live.com	2013-05-23 15:42:48	Twitter
+account_4024401@hotmail.co.uk	2013-05-25 00:51:29	Facebook
+account_4028191@uclan.ac.uk	2013-05-27 14:57:48	Twitter
+account_4031584@hotmail.co.uk	2013-05-28 15:42:37	Google Adwords
+account_4033604@hotmail.co.uk	2013-05-30 11:12:05	Google Adwords
+account_4044909@me.com	2013-05-30 18:07:59	Facebook
+account_4047458@gmail.com	2013-05-31 11:36:03	Google Adwords
+account_4048533@o2.co.uk	2013-05-31 16:08:20	Facebook
+account_4049312@meager.net	2013-05-31 18:02:10	Google Adwords
