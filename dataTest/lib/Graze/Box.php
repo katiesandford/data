@@ -57,4 +57,11 @@ class Box
         }
         return $this->dispatchDate;
     }
+
+    //My added funtionc
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
 }

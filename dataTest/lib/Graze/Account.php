@@ -2,6 +2,8 @@
 
 namespace Graze;
 
+use Graze\Account;
+
 /**
  * Account class
  */
@@ -16,6 +18,7 @@ class Account
     public function __construct($accountId)
     {
         $this->accountId = $accountId;
+        $account = new Account($this->accountId);
         $this->database = Database::getConnection();
         $rows = $this->database->fetchAllPrepared("
             SELECT id, signup_datetime, promotion_code, email_address
@@ -71,5 +74,36 @@ class Account
     public function getEmailAddress()
     {
         return $this->emailAddress;
+    }
+
+    //Functions added by me
+    public function getFirstChurnDate()
+    {
+        $sql = 'SELECT MAX(end_date) FROM schedule WHERE account_id = ?';
+        $results = $this->database->fetchAllPrepared($sql, array($this->accountId));
+        return array_values($results)[0] ?: NULL;
+    }
+
+    public function getNumberOfBoxesSent($price = NULL)
+    {
+        $sql = 'SELECT COUNT DISTINCT * FROM box WHERE account_id = ?';
+        if (!IS_NULL($price))
+            $sql .= ' AND price = ?'
+        $results = $this->database->fetchAllPrepared($sql, array($this->accountId, $price));
+        return array_values($results)[0] ?: 0;
+    }
+
+    public function getFirstBoxId($price = NULL)
+    {
+        $sql = 'SELECT TOP 1 id * FROM box WHERE account_id = ? AND price = ? ORDER BY DATE';
+        $results = $this->database->fetchAllPrepared($sql, array($this->accountId, $price));
+        return array_values($results)[0] ?: NULL;
+    }
+
+    public function getTotalRevenue()
+    {
+        $sql = 'SELECT SUM(price) FROM box WHERE account_id = ?';
+        $results = $this->database->fetchAllPrepared($sql, array($this->accountId, $price));
+        return array_values($results)[0] ?: 0;
     }
 }

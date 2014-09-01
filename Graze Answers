@@ -1,4 +1,4 @@
-Graze Answers
+﻿Graze Answers
 
 1. How many customers signed up on the week starting 15th Oct 2012?
 Query:
@@ -105,7 +105,7 @@ b. (optional) How many customers were active (haven’t cancelled the service) a
 		To perform the cumulative sum we didn't actually need to use the absolute min_signupweek in the signupweek and cancelweek calculations as they cancel. I included it to keep the weeks more readable.
 
 	Answer:
-		I'm not sure how to send this to you.
+		See Question 10.
 
 11. Explain what this query does, and write down a possible use you can imagine for it: 
 
