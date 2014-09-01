@@ -1,1 +1,1 @@
-ALTER TABLE reporting_account ADD COLUMN promotion_channel TEXT;
+ALTER TABLE reporting_account ADD COLUMN schedules_tried TEXT;

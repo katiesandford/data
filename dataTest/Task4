@@ -1,0 +1,3 @@
+If we are updating a reporting account record, rather than creating it the 'UPDATE' sql statement should be used rather than the 'INSERT' statement.
+
+Instead of running the script for each 
