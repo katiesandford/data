@@ -23,6 +23,7 @@ function parseThirdPartyFiles(){
 			//Open the file
 			$file = fopen($itemInfo->getPathname(), "r") or die("Unable to open file!");
 			//Iterate through lines in the file
+                        
 			while(! feof($file)) {
 				$line = fgets($file);
 		  		$lineData =  explode("\t", $line);
