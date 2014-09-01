@@ -26,22 +26,17 @@ function parseThirdPartyFiles (){
                         
 			while(! feof($file)) {
 				$line = fgets($file);
-                                echo $line;
-				if ($line){
-    		  			$lineData =  explode("\t", $line);
-        	                        print_r($lineData);
-					print '\n';
-					print_r($lineData[0]);
-					print_r('\n');
-	  				assert(count($lineData)==3, 'A line in file '.$itemInfo->getFilename().' does not contain excalty 3 items: ' .$line);
-	  				if ($thirdPartySignUpData[$lineData[0]]){
-	  				throw new Exception("File ".$itemInfo->getFilename()." contains duplicate data: ".$line);
-	  				}
-	  				//$lineData[1] = date
-	  				//$lineData[2] = promotion code
-	  				$thirdPartySignUpData[$lineData[0]] = array($lineData[1], $lineData[2]);
-				}
-	  		}
+		  		$lineData =  explode("\t", $line);
+		  		if (!count($lineData)==3){
+		  			continue;
+		  		}
+		  		if (array_key_exists($lineData[0], $thirdPartySignUpData){
+		  			throw new Exception("File *".$itemInfo->getFilename().") contains duplicate data: ".$lineData);
+		  		}
+		  		//$lineData[1] = date
+		  		//$lineData[2] = promotion code
+		  		$thirdPartySignUpData[$lineData[0]] = array($lineData[1], $lineData[2]);
+		  	}
 			
 		}
 
