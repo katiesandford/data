@@ -9,13 +9,13 @@ use Graze\Database;
 // Get all account ids from the live schema
 $reportingDb = Database::getConnection('reporting');
 $liveDb = Database::getConnection('live');
-$sql = 'SELECT id FROM account'
+$sql = 'SELECT id FROM account';
 
 $accountIds = $liveDb->fetchAllPrepared($sql);
 
 
 function parseThirdPartyFiles (){
-	$iterator = new DirectoryIterator('/data');
+	$iterator = new DirectoryIterator('/home/vagrant/data/dataTest/data');
 	$thirdPartySignUpData = array();
 	//Iterate though files in the data directory
 	foreach ($iterator as $itemInfo) {
@@ -23,16 +23,24 @@ function parseThirdPartyFiles (){
 			//Open the file
 			$file = fopen($itemInfo->getPathname(), "r") or die("Unable to open file!");
 			//Iterate through lines in the file
+                        
 			while(! feof($file)) {
 				$line = fgets($file);
-	  			$lineData =  explode(" ", $line);
-	  			assert(count($lineData)==3, 'A line in file '.$itemInfo->getFilename().' does not contain excalty 3 items: ' .$line);
-	  			if ($thirdPartySignUpData[$lineData[0]]){
-	  				throw new Exception("We have duplicate sign up data has been found!");
-	  			}
-	  			//$lineData[1] = date
-	  			//$lineData[2] = promotion code
-	  			$thirdPartySignUpData[$lineData[0]] = array($lineData[1], $lineData[2]);
+                                echo $line;
+				if ($line){
+    		  			$lineData =  explode("\t", $line);
+        	                        print_r($lineData);
+					print '\n';
+					print_r($lineData[0]);
+					print_r('\n');
+	  				assert(count($lineData)==3, 'A line in file '.$itemInfo->getFilename().' does not contain excalty 3 items: ' .$line);
+	  				if ($thirdPartySignUpData[$lineData[0]]){
+	  				throw new Exception("File ".$itemInfo->getFilename()." contains duplicate data: ".$line);
+	  				}
+	  				//$lineData[1] = date
+	  				//$lineData[2] = promotion code
+	  				$thirdPartySignUpData[$lineData[0]] = array($lineData[1], $lineData[2]);
+				}
 	  		}
 			
 		}
@@ -55,16 +63,16 @@ function createReportingAccount($accountId){
 	$firstChurnDate = $account->getFirstChurnDate();
 	$totalRevenue = $account->getTotalRevenue();
 	$userEnteredPromotionCode = $account->getPromotionCode();
-	$thirdPartySuppliedPromotionCode = $thirdPartySignUpData[$account->getEmailAddress()]
+	$thirdPartySuppliedPromotionCode = $thirdPartySignUpData[$account->getEmailAddress()];
 	
 	if ($userEnteredPromotionCode AND $thirdPartySuppliedPromotionCode){
-		throw new Exception('Account with id '.strval($accountId).'should not have singed up with a promotion channel if one has been supplied by a third party')
+		throw new Exception('Account with id '.strval($accountId).'should not have singed up with a promotion channel if one has been supplied by a third party');
 	}
 
-	$promotionChannel = $userEnteredPromotionCode ?: $thirdPartySuppliedPromotionCode ?: "direct"
+	$promotionChannel = $userEnteredPromotionCode ?: $thirdPartySuppliedPromotionCode ?: "direct";
 
-	$sqlInsert = 'INSERT INTO reporing_account (account_id, conversion_date, boxes_sent, full_price_boxes_sent, first_churn_date, total_revenue, promotion_channel) VALUES (?,?,?,?,?,?)'
-	reportingDb->queryPrepared($sqlInsert, array($accountId, $conversionDate, $numberOfBoxesSent, $numberOfFullPriceBoxesSent, $firstChurnDate, $totalRevenue, $promotionChannel));
+	$sqlInsert = 'INSERT INTO reporing_account (account_id, conversion_date, boxes_sent, full_price_boxes_sent, first_churn_date, total_revenue, promotion_channel) VALUES (?,?,?,?,?,?)';
+	$reportingDb->queryPrepared($sqlInsert, array($accountId, $conversionDate, $numberOfBoxesSent, $numberOfFullPriceBoxesSent, $firstChurnDate, $totalRevenue, $promotionChannel));
 	print "Inserted row for account id ".strval($accountId)." into table reporting.reporting_account\n";
 }
 
