@@ -30,7 +30,8 @@ function parseThirdPartyFiles (){
 		  		if (!count($lineData)==3){
 		  			continue;
 		  		}
-		  		if (array_key_exists($lineData[0], $thirdPartySignUpData){
+		  		if (array_key_exists($lineData[0], $thirdPartySignUpData)){
+                                        continue;
 		  			throw new Exception("File *".$itemInfo->getFilename().") contains duplicate data: ".$lineData);
 		  		}
 		  		//$lineData[1] = date
@@ -44,17 +45,18 @@ function parseThirdPartyFiles (){
 	return $thirdPartySignUpData[$lineData[0]];
 }
 $thirdPartySignUpData = parseThirdPartyFiles();
+print 'aaaaa';
 print_r($thirdPartySignUpData);
-
+print 'bbbb';
 function createReportingAccount($accountId){
 
 	$account = new Account($accountId);
 
 	//Get conveversion date
-	$firstFullPriceBox = $account->getFirstBoxId(300);
+	$firstFullPriceBox = $account->getFirstBoxId();
 	$conversionDate = $firstFullPriceBox;
 	$numberOfBoxesSent = $account->getNumberOfBoxesSent();
-	$numberOfFullPriceBoxesSent = $account->getNumberOfBoxesSent(300);
+	$numberOfFullPriceBoxesSent = $account->getNumberOfBoxesSent();
 	$firstChurnDate = $account->getFirstChurnDate();
 	$totalRevenue = $account->getTotalRevenue();
 	$userEnteredPromotionCode = $account->getPromotionCode();
