@@ -87,8 +87,9 @@ class Account
     public function getNumberOfBoxesSent($price = NULL)
     {
         $sql = 'SELECT COUNT DISTINCT * FROM box WHERE account_id = ?';
-        if (!IS_NULL($price))
+        if (!IS_NULL($price)) {
             $sql .= ' AND price = ?'
+        }
         $results = $this->database->fetchAllPrepared($sql, array($this->accountId, $price));
         return array_values($results)[0] ?: 0;
     }
