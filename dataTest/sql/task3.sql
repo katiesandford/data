@@ -1,0 +1,1 @@
+ALTER TABLE reporting_account ADD COLUMN promotion_channel TEXT;

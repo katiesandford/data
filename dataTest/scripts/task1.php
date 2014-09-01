@@ -13,37 +13,6 @@ $sql = 'SELECT id FROM account'
 
 $accountIds = $liveDb->fetchAllPrepared($sql);
 
-function createReportingAccount($accountId){
-
-	$account = new Account($accountId);
-
-	//Get conveversion date
-	$firstFullPriceBox = $account->getFirstBoxId(300);
-	$conversionDate = $firstFullPriceBox
-
-	//Get number of boxes sent
-	$numberOfBoxesSent = $account->getNumberOfBoxesSent();
-
-	//Get number of full price boxes sent
-	$numberOfFullPriceBoxesSent = $account->getNumberOfBoxesSent(300)l
-
-	//Get first churn date
-	$firstChurnDate = $account->getFirstChurnDate();
-
-	//Get total revenue
-	$totalRevenue = $account->getTotalRevenue();
-
-	$sqlInsert = 'INSERT INTO reporing_account (account_id, conversion_date, boxes_sent, full_price_boxes_sent, first_churn_date, total_revenue) VALUES (?,?,?,?,?,?)'
-	reportingDb->queryPrepared($sqlInsert, array($accountId, $conversionDate, $numberOfBoxesSent, $numberOfFullPriceBoxesSent, $firstChurnDate, $totalRevenue));
-	print "Inserted row for account id ".strval($accountId)." into table reporting.reporting_account\n";
-}
-
-foreach ($accountIds as $accountId) {
-	createReportingAccount($accountId);
-}
-
-//Task2
-//Directory Iterator loops through items in a directory
 
 function parseThirdPartyFiles (){
 	$iterator = new DirectoryIterator('/data');
@@ -59,7 +28,7 @@ function parseThirdPartyFiles (){
 	  			$lineData =  explode(" ", $line);
 	  			assert(count($lineData)==3, 'A line in file '.$itemInfo->getFilename().' does not contain excalty 3 items: ' .$line);
 	  			if ($thirdPartySignUpData[$lineData[0]]){
-	  				die("We have duplicate sign up data has been found!");
+	  				throw new Exception("We have duplicate sign up data has been found!");
 	  			}
 	  			//$lineData[1] = date
 	  			//$lineData[2] = promotion code
@@ -73,3 +42,32 @@ function parseThirdPartyFiles (){
 }
 $thirdPartySignUpData = parseThirdPartyFiles();
 print_r($thirdPartySignUpData);
+
+function createReportingAccount($accountId){
+
+	$account = new Account($accountId);
+
+	//Get conveversion date
+	$firstFullPriceBox = $account->getFirstBoxId(300);
+	$conversionDate = $firstFullPriceBox;
+	$numberOfBoxesSent = $account->getNumberOfBoxesSent();
+	$numberOfFullPriceBoxesSent = $account->getNumberOfBoxesSent(300);
+	$firstChurnDate = $account->getFirstChurnDate();
+	$totalRevenue = $account->getTotalRevenue();
+	$userEnteredPromotionCode = $account->getPromotionCode();
+	$thirdPartySuppliedPromotionCode = $thirdPartySignUpData[$account->getEmailAddress()]
+	
+	if ($userEnteredPromotionCode AND $thirdPartySuppliedPromotionCode){
+		throw new Exception('Account with id '.strval($accountId).'should not have singed up with a promotion channel if one has been supplied by a third party')
+	}
+
+	$promotionChannel = $userEnteredPromotionCode ?: $thirdPartySuppliedPromotionCode ?: "direct"
+
+	$sqlInsert = 'INSERT INTO reporing_account (account_id, conversion_date, boxes_sent, full_price_boxes_sent, first_churn_date, total_revenue, promotion_channel) VALUES (?,?,?,?,?,?)'
+	reportingDb->queryPrepared($sqlInsert, array($accountId, $conversionDate, $numberOfBoxesSent, $numberOfFullPriceBoxesSent, $firstChurnDate, $totalRevenue, $promotionChannel));
+	print "Inserted row for account id ".strval($accountId)." into table reporting.reporting_account\n";
+}
+
+foreach ($accountIds as $accountId) {
+	createReportingAccount($accountId);
+}
