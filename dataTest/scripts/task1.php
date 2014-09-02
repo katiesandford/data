@@ -44,13 +44,12 @@ function parseThirdPartyFiles(){
 $thirdPartySignUpData = parseThirdPartyFiles();
 print_r($thirdPartySignUpData);
 
-function createReportingAccount($accountId){
-
-	$account = new Account($accountId);
-	$firstFullPriceBox = $account->getFirstBoxId(300);
+function createReportingAccount($account{
+	$accoundId = $account->getId();
+	$firstFullPriceBox = $account->getFirstBoxId();
 	$conversionDate = $firstFullPriceBox;
 	$numberOfBoxesSent = $account->getNumberOfBoxesSent();
-	$numberOfFullPriceBoxesSent = $account->getNumberOfBoxesSent(300);
+	$numberOfFullPriceBoxesSent = $account->getNumberOfBoxesSent();
 	$firstChurnDate = $account->getFirstChurnDate();
 	$totalRevenue = $account->getTotalRevenue();
 	$userEnteredPromotionCode = $account->getPromotionCode();
@@ -69,5 +68,6 @@ function createReportingAccount($accountId){
 }
 
 foreach ($accountIds as $accountId) {
-	createReportingAccount($accountId);
+	$account = new Account($accountId);
+	createReportingAccount($account);
 }
