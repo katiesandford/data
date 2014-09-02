@@ -7,7 +7,7 @@ use Graze\Account;
 /**
  * Account class
  */
-class Account
+class ReportingAccount
 {
     private $database;
     private $accountId;
