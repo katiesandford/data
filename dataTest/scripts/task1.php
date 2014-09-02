@@ -6,24 +6,25 @@ require 'vendor/autoload.php';
 use Graze\Account;
 use Graze\Database;
 
+
 $reportingDb = Database::getConnection('reporting');
 $liveDb = Database::getConnection('live');
-$sql = 'SELECT id FROM account';
 
 // Get all account ids from the live schema
+$sql = 'SELECT id FROM account';
 $accountIds = $liveDb->fetchAllPrepared($sql);
 
-
+/** 
+ *Iterate though supplied third party files.
+ *Store the email address and promotion code as key value pairs in an accessible array 
+ *@return array list dictionary of email key => promotion code
+*/
 function parseThirdPartyFiles(){
 	$iterator = new DirectoryIterator('/home/vagrant/data/dataTest/data');
 	$thirdPartySignUpData = array();
-	//Iterate though files in the data directory
 	foreach ($iterator as $itemInfo) {
 		if ($itemInfo->isFile()){
-			//Open the file
-			$file = fopen($itemInfo->getPathname(), "r") or die("Unable to open file!");
-			//Iterate through lines in the file
-                        
+			$file = fopen($itemInfo->getPathname(), "r") or die("Unable to open file!");         
 			while(! feof($file)) {
 				$line = fgets($file);
 		  		$lineData =  explode("\t", $line);
@@ -31,10 +32,10 @@ function parseThirdPartyFiles(){
 		  			continue;
 		  		}
 		  		if (array_key_exists($lineData[0], $thirdPartySignUpData)){
-                                        continue;
+                     continue;
 		  			throw new Exception("File *".$itemInfo->getFilename().") contains duplicate data: ".$lineData);
 		  		}
-		  		$thirdPartySignUpData[$lineData[0]] = array($lineData[1], $lineData[2]);
+		  		$thirdPartySignUpData[$lineData[0]] = $lineData[1];
 		  	}
 			
 		}
@@ -42,9 +43,8 @@ function parseThirdPartyFiles(){
 	}
 	return $thirdPartySignUpData[$lineData[0]];
 }
-$thirdPartySignUpData = parseThirdPartyFiles();
-print 'aaaaa';
-print_r($thirdPartySignUpData);
+
+
 function createReportingAccount($account){
 	$accoundId = $account->getId();
 	$firstFullPriceBox = $account->getFirstBoxId();
@@ -54,7 +54,7 @@ function createReportingAccount($account){
 	$firstChurnDate = $account->getFirstChurnDate();
 	$totalRevenue = $account->getTotalRevenue();
 	$userEnteredPromotionCode = $account->getPromotionCode();
-	$thirdPartySuppliedPromotionCode = $thirdPartySignUpData[$account->getEmailAddress()][1];
+	$thirdPartySuppliedPromotionCode = $thirdPartySignUpData[$account->getEmailAddress()];
 	$schedulesTried = $account->getSchedulesTried();
 	
 	if ($userEnteredPromotionCode AND $thirdPartySuppliedPromotionCode){
@@ -68,6 +68,12 @@ function createReportingAccount($account){
 	print "Inserted row for account id ".strval($accountId)." into table reporting.reporting_account\n";
 }
 
+
+
+$thirdPartySignUpData = parseThirdPartyFiles();
+print 'aaaaa';
+print_r($thirdPartySignUpData);
+//
 foreach ($accountIds as $accountId) {
 	$account = new Account($accountId);
 	createReportingAccount($account);
