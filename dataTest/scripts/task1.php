@@ -48,6 +48,6 @@ print 'aaaaa';
 print_r($thirdPartySignUpData);
 //
 foreach ($accountIds as $accountId) {
-	$reportingAccount =  new ReportingAccont($accountId);
+	$reportingAccount =  new ReportingAccount($accountId);
 	$reportingAccount->insertRecordIntoDataBaseTable();
 }
