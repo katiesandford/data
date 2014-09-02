@@ -47,7 +47,8 @@ $thirdPartySignUpData = parseThirdPartyFiles();
 
 print_r($thirdPartySignUpData);
 //
-foreach ($accountIds as $accountId) {
+//foreach ($accountIds as $accountId) {
+$accpountId=12324234;
 	$reportingAccount =  new ReportingAccount($accountId);
 	$reportingAccount->insertRecordIntoDataBaseTable();
-}
+//}
