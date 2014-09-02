@@ -6,15 +6,15 @@ require 'vendor/autoload.php';
 use Graze\Account;
 use Graze\Database;
 
+// Get all account ids from the live schema
 $reportingDb = Database::getConnection('reporting');
 $liveDb = Database::getConnection('live');
 $sql = 'SELECT id FROM account';
 
-// Get all account ids from the live schema
 $accountIds = $liveDb->fetchAllPrepared($sql);
 
 
-function parseThirdPartyFiles(){
+function parseThirdPartyFiles (){
 	$iterator = new DirectoryIterator('/home/vagrant/data/dataTest/data');
 	$thirdPartySignUpData = array();
 	//Iterate though files in the data directory
@@ -26,16 +26,22 @@ function parseThirdPartyFiles(){
                         
 			while(! feof($file)) {
 				$line = fgets($file);
-		  		$lineData =  explode("\t", $line);
-		  		if (!count($lineData)==3){
-		  			continue;
-		  		}
-		  		if (array_key_exists($lineData[0], $thirdPartySignUpData)){
-                                        continue;
-		  			throw new Exception("File *".$itemInfo->getFilename().") contains duplicate data: ".$lineData);
-		  		}
-		  		$thirdPartySignUpData[$lineData[0]] = array($lineData[1], $lineData[2]);
-		  	}
+                                echo $line;
+				if ($line){
+    		  			$lineData =  explode("\t", $line);
+        	                        print_r($lineData);
+					print '\n';
+					print_r($lineData[0]);
+					print_r('\n');
+	  				assert(count($lineData)==3, 'A line in file '.$itemInfo->getFilename().' does not contain excalty 3 items: ' .$line);
+	  				if (]){
+	  				throw new Exception("File ".$itemInfo->getFilename()." contains duplicate data: ".$line);
+	  				}
+	  				//$lineData[1] = date
+	  				//$lineData[2] = promotion code
+	  				$thirdPartySignUpData[$lineData[0]] = array($lineData[1], $lineData[2]);
+				}
+	  		}
 			
 		}
 
@@ -43,19 +49,21 @@ function parseThirdPartyFiles(){
 	return $thirdPartySignUpData[$lineData[0]];
 }
 $thirdPartySignUpData = parseThirdPartyFiles();
-print 'aaaaa';
 print_r($thirdPartySignUpData);
-function createReportingAccount($account{
-	$accoundId = $account->getId();
-	$firstFullPriceBox = $account->getFirstBoxId();
+
+function createReportingAccount($accountId){
+
+	$account = new Account($accountId);
+
+	//Get conveversion date
+	$firstFullPriceBox = $account->getFirstBoxId(300);
 	$conversionDate = $firstFullPriceBox;
 	$numberOfBoxesSent = $account->getNumberOfBoxesSent();
-	$numberOfFullPriceBoxesSent = $account->getNumberOfBoxesSent();
+	$numberOfFullPriceBoxesSent = $account->getNumberOfBoxesSent(300);
 	$firstChurnDate = $account->getFirstChurnDate();
 	$totalRevenue = $account->getTotalRevenue();
 	$userEnteredPromotionCode = $account->getPromotionCode();
-	$thirdPartySuppliedPromotionCode = $thirdPartySignUpData[$account->getEmailAddress()][1];
-	$schedulesTried = $account->getSchedulesTried();
+	$thirdPartySuppliedPromotionCode = $thirdPartySignUpData[$account->getEmailAddress()];
 	
 	if ($userEnteredPromotionCode AND $thirdPartySuppliedPromotionCode){
 		throw new Exception('Account with id '.strval($accountId).'should not have singed up with a promotion channel if one has been supplied by a third party');
@@ -63,12 +71,11 @@ function createReportingAccount($account{
 
 	$promotionChannel = $userEnteredPromotionCode ?: $thirdPartySuppliedPromotionCode ?: "direct";
 
-	$sqlInsert = 'INSERT INTO reporing_account (account_id, conversion_date, boxes_sent, full_price_boxes_sent, first_churn_date, total_revenue, promotion_channel, schedules_tried) VALUES (?,?,?,?,?,?)';
-	$reportingDb->queryPrepared($sqlInsert, array($accountId, $conversionDate, $numberOfBoxesSent, $numberOfFullPriceBoxesSent, $firstChurnDate, $totalRevenue, $promotionChannel, $schedulesTried));
+	$sqlInsert = 'INSERT INTO reporing_account (account_id, conversion_date, boxes_sent, full_price_boxes_sent, first_churn_date, total_revenue, promotion_channel) VALUES (?,?,?,?,?,?)';
+	$reportingDb->queryPrepared($sqlInsert, array($accountId, $conversionDate, $numberOfBoxesSent, $numberOfFullPriceBoxesSent, $firstChurnDate, $totalRevenue, $promotionChannel));
 	print "Inserted row for account id ".strval($accountId)." into table reporting.reporting_account\n";
 }
 
 foreach ($accountIds as $accountId) {
-	$account = new Account($accountId);
-	createReportingAccount($account);
+	createReportingAccount($accountId);
 }
