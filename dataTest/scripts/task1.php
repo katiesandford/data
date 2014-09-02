@@ -44,7 +44,7 @@ function parseThirdPartyFiles(){
 }
 
 $thirdPartySignUpData = parseThirdPartyFiles();
-print 'aaaaa';
+
 print_r($thirdPartySignUpData);
 //
 foreach ($accountIds as $accountId) {

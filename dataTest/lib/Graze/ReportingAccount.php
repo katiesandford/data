@@ -2,7 +2,7 @@
 
 namespace Graze;
 
-use Graze\Account;
+use Graze\ReportingAccount;
 
 /**
  * Account class
