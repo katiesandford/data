@@ -45,7 +45,7 @@ function parseThirdPartyFiles(){
 $thirdPartySignUpData = parseThirdPartyFiles();
 print 'aaaaa';
 print_r($thirdPartySignUpData);
-function createReportingAccount($account{
+function createReportingAccount($account){
 	$accoundId = $account->getId();
 	$firstFullPriceBox = $account->getFirstBoxId();
 	$conversionDate = $firstFullPriceBox;
