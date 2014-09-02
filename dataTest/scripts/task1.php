@@ -5,9 +5,8 @@ require 'vendor/autoload.php';
 
 use Graze\Account;
 use Graze\Database;
+use Graze\ReportingAccount;
 
-
-$reportingDb = Database::getConnection('reporting');
 $liveDb = Database::getConnection('live');
 
 // Get all account ids from the live schema
@@ -44,37 +43,11 @@ function parseThirdPartyFiles(){
 	return $thirdPartySignUpData[$lineData[0]];
 }
 
-
-function createReportingAccount($account){
-	$accoundId = $account->getId();
-	$firstFullPriceBox = $account->getFirstBoxId();
-	$conversionDate = $firstFullPriceBox;
-	$numberOfBoxesSent = $account->getNumberOfBoxesSent();
-	$numberOfFullPriceBoxesSent = $account->getNumberOfBoxesSent();
-	$firstChurnDate = $account->getFirstChurnDate();
-	$totalRevenue = $account->getTotalRevenue();
-	$userEnteredPromotionCode = $account->getPromotionCode();
-	$thirdPartySuppliedPromotionCode = $thirdPartySignUpData[$account->getEmailAddress()];
-	$schedulesTried = $account->getSchedulesTried();
-	
-	if ($userEnteredPromotionCode AND $thirdPartySuppliedPromotionCode){
-		throw new Exception('Account with id '.strval($accountId).'should not have singed up with a promotion channel if one has been supplied by a third party');
-	}
-
-	$promotionChannel = $userEnteredPromotionCode ?: $thirdPartySuppliedPromotionCode ?: "direct";
-
-	$sqlInsert = 'INSERT INTO reporing_account (account_id, conversion_date, boxes_sent, full_price_boxes_sent, first_churn_date, total_revenue, promotion_channel, schedules_tried) VALUES (?,?,?,?,?,?)';
-	$reportingDb->queryPrepared($sqlInsert, array($accountId, $conversionDate, $numberOfBoxesSent, $numberOfFullPriceBoxesSent, $firstChurnDate, $totalRevenue, $promotionChannel, $schedulesTried));
-	print "Inserted row for account id ".strval($accountId)." into table reporting.reporting_account\n";
-}
-
-
-
 $thirdPartySignUpData = parseThirdPartyFiles();
 print 'aaaaa';
 print_r($thirdPartySignUpData);
 //
 foreach ($accountIds as $accountId) {
-	$account = new Account($accountId);
-	createReportingAccount($account);
+	$reportingAccount =  new ReportingAccont($accountId);
+	$reportingAccount->insertRecordIntoDataBaseTable();
 }

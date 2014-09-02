@@ -94,9 +94,9 @@ class Account
         return array_values($results)[0] ?: 0;
     }
 
-    public function getFirstBoxId($price = NULL)
+    public function getFirstBoxId()
     {
-        $sql = 'SELECT TOP 1 id * FROM box WHERE account_id = ? AND price = ? ORDER BY DATE';
+        $sql = 'SELECT TOP 1 id * FROM box WHERE account_id = ? ORDER BY DATE';
         $results = $this->database->fetchAllPrepared($sql, array($this->accountId, $price));
         return array_values($results)[0] ?: NULL;
     }
