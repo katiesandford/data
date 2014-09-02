@@ -5,7 +5,7 @@ namespace Graze;
 use Graze\ReportingAccount;
 
 /**
- * Account class
+ * ReportingAccount class
  */
 class ReportingAccount
 {
